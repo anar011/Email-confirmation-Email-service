@@ -1,0 +1,47 @@
+﻿@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container">
+    <div class="text-danger" asp-validation-summary="All"></div>
+    <form method="post" asp-action="Login" style="    margin-top: 250px;
+    margin-bottom: 100px;">
+  <div class="form-group">
+        <input id="form3Example4cg" autocomplete="off" class="form-control form-control-lg" asp-for="EmailOrUsername" placeholder="Username" />
+        <span class="text-danger" asp-validation-for="EmailOrUsername"></span>
+  </div>
+  <div class="form-group">
+        <input id="form3Example4cdg" class="form-control form-control-lg" asp-for="Password" placeholder="Password" />
+        <span class="text-danger" asp-validation-for="Password"></span>
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

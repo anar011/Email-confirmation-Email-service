@@ -1,0 +1,57 @@
+﻿@model IEnumerable<New>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container my-5">
+    <a class="btn btn-success text-white" asp-action="Create" style="float:right">Create</a>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Image
+                    </th>
+                    <th>
+                        Status
+                    </th>
+                    <th>
+                        Operations
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var slider in Model)
+                {
+                    <tr>
+                        <td>
+                            <img src="~/images/@slider.Image" style="width:70px;height:70px" alt="image" />
+                        </td>
+
+                        <td>
+                            @if (slider.SoftDelete)
+                            {
+                                <div class="deActive-status"></div>
+                            }
+                            else
+                            {
+                                <div class="active-status"></div>
+                            }
+
+
+                        </td>
+                        <td>
+                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@slider.Id">Info</a>
+                            <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@slider.Id">Edit</a>
+                            <a class="btn btn-outline-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+

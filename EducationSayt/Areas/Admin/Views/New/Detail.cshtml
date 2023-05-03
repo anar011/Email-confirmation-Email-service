@@ -1,0 +1,54 @@
+﻿@model New
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container my-5">
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    
+                    <th>
+                        Image
+                    </th>
+                    
+                    <th>
+                        Date
+                    </th>
+                    
+                    <th>
+                        Description
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+
+                <tr>
+                    <td>
+                        <img src="~/images/@Model.Image" style="width:70px;height:70px" alt="image" />
+                    </td>
+
+                    <td>
+                        @Model.Date
+                    </td>
+                    <td>
+                        @Model.Description
+                    </td>
+                    
+
+                </tr>
+
+
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <a class="btn btn-info mt-3" asp-action="Index">Back</a>
+</div>
+

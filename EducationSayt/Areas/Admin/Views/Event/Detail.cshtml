@@ -1,0 +1,54 @@
+﻿@model Event
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container my-5">
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    
+                    <th>
+                        Header
+                    </th>
+                    
+                    <th>
+                        Location
+                    </th>
+                    
+                    <th>
+                        Date
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+
+                <tr>
+                    <td>
+                        @Model.Header
+                    </td>
+
+                    <td>
+                        @Model.Location
+                    </td>
+                    <td>
+                        @Model.Date
+                    </td>
+                    
+
+                </tr>
+
+
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <a class="btn btn-info mt-3" asp-action="Index">Back</a>
+</div>
+

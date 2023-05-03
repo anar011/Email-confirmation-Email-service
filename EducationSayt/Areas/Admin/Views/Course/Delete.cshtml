@@ -1,0 +1,52 @@
+﻿@model Course
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container my-5">
+
+    <div class="form-group">
+        <label class="my-2">Sales</label>
+        <textarea class="form-control" disabled id="customFile" asp-for="Sales"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label class="my-2">Description</label>
+        <input class="form-control" disabled id="description-text" value="@ViewBag.desc" />
+    </div>
+
+    <div class="form-group">
+        <label class="my-2">Price</label>
+        <input type="text" class="form-control" disabled id="customFile" asp-for="Price" />
+    </div>
+
+
+    <div class="form-group">
+        <label class="my-2">Category</label>
+        <input class="form-control" id="customFile" disabled asp-for="Author.FullName" />
+    </div>
+
+    <div class="form-group">
+        @foreach (var item in Model.CourseImages)
+        {
+            <img src="~/images/@item.Image" style="width:150px;height:150px" />
+        }
+    </div>
+
+    <div class="form-group">
+        <h3 class="text-danger">Are you sure to delete product?</h3>
+    </div>
+
+
+    <form asp-action="Delete" method="post">
+        <div class="form-group">
+            <div class="buttons my-3">
+                <button type="submit" class="btn btn-primary">Delete</button>
+                <a class="btn btn-light" asp-action="Index">Cancel</a>
+            </div>
+        </div>
+    </form>
+
+</div>
+

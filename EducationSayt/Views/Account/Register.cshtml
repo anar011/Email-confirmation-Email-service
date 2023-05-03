@@ -1,0 +1,45 @@
+﻿@model RegisterVM
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container">
+    <div class="text-danger" asp-validation-summary="All"></div>
+    <form method="post" asp-action="Register" style="    margin-top: 250px;
+    margin-bottom: 100px;">
+        <div class="form-group">
+            <input id="form3Example1cg" class="form-control form-control-lg" asp-for="FullName" placeholder="Full Name" />
+            <span class="text-danger" asp-validation-for="FullName"></span>
+        </div>
+        <div class="form-group">
+            <input id="form3Example3cg" class="form-control form-control-lg" asp-for="Email" placeholder="Email" />
+            <span class="text-danger" asp-validation-for="Email"></span>
+        </div>
+
+        <div class="form-group">
+            <input id="form3Example4cg" class="form-control form-control-lg" asp-for="UserName" placeholder="Username" />
+            <span class="text-danger" asp-validation-for="UserName"></span>
+        </div>
+        <div class="form-group">
+            <input id="form3Example4cdg" class="form-control form-control-lg" asp-for="Password" placeholder="Password" />
+            <span class="text-danger" asp-validation-for="Password"></span>
+        </div>
+        <div class="form-group">
+            <input id="form3Example4cdg" class="form-control form-control-lg" asp-for="ConfirmPassword" placeholder="Repeat your password" />
+            <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+

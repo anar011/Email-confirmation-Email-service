@@ -1,0 +1,55 @@
+﻿@model Slider
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container my-5">
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Image
+                    </th>
+                    <th>
+                        Icon
+                    </th>
+                    <th>
+                        Header
+                    </th>
+                    <th>
+                        Description
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                
+                
+                    <tr>
+                        <td class="py-1">
+                            <img src="~/images/@Model.Image" style="width:70px;height:70px" alt="image" />
+                        </td>
+
+                        <td>
+                            @Model.Icon
+                        </td>
+                        <td>
+                        @Model.Header
+                        </td>
+                        <td>
+                        @Model.Description
+                        </td>
+                    </tr>
+                
+
+
+            </tbody>
+        </table>
+    </div>
+    
+
+    <a class="btn btn-info mt-3" asp-action="Index">Back</a>
+</div>
+

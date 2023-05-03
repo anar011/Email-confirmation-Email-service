@@ -1,0 +1,74 @@
+﻿@model Course
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container my-5">
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Image
+                    </th>
+                    <th>
+                        Header
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Sales
+                    </th>
+                    <th>
+                        Author Name
+                    </th>
+                    <th>
+                        Author Image
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                
+                
+                    <tr>
+                        <td class="py-1">
+                            <img src="~/images/@Model.CourseImages.FirstOrDefault()?.Image" style="width:70px;height:70px" alt="image" />
+                        </td>
+
+                        <td>
+                            @Model.Header
+                        </td>
+                        <td>
+                        @Model.Description
+                        </td>
+                        <td>
+                        @Model.Price
+                        </td>
+                        <td>
+                        @Model.Sales
+                        </td>
+                        <td>
+                        @Model.Author.FullName
+                        </td>
+                    <td>
+                        @Model.Author.Image
+                    </td>
+
+                    </tr>
+                
+
+
+            </tbody>
+        </table>
+    </div>
+    
+
+    <a class="btn btn-info mt-3" asp-action="Index">Back</a>
+</div>
+
